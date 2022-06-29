@@ -1,0 +1,36 @@
+HTML elements:
+    viewport which displays user input/output in real time
+    18 buttons which send user input to view port
+    Must scale to device size
+
+SCSS
+    Buttons highlight when hovered over
+    Grid to organize buttons
+    Colours/character spacing clear to ensure accessibility
+    calculator must be keyboard/screen reader friendly
+
+JS
+    required data
+        Current number
+            Float
+        previous number
+            Float
+        answer 
+            Float
+
+    Functions
+        Store Input number
+            Current Number
+        remove number
+            Current Number
+        clear viewport
+            Current Number
+            previous number
+            Answer
+        select opperator
+        perform maths
+            Current Number
+            previous number
+            Answer
+        push answer
+    push result of operation to viewprot
