@@ -8,16 +8,7 @@ let prevNum = document.getElementById("calculator__previous")
 
 
 numButton.forEach (input => input.addEventListener("click", (event) => {
-    // currentNum.innerHTML += event.target.innerHTML
-    // switch(event.target.innerText) {
-    //     case "AC":
-    //         currentNum.innerText ="";
-    //         break;
-    //     case "+":
-    //         prevNum.innerText = currentNum.innerText;
 
-    //     default:
-    //         currentNum.innerText+= event.target.innerText;
 
     if (event.target.innerText <= 9) {
         currentNum.innerText+= event.target.innerText;
