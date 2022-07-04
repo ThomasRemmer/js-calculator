@@ -25,8 +25,11 @@ let operation = document.getElementById("calculator__opperator")
         else if(event.target.id == "decimalButton") {
             currentNum.innerText+= event.target.innerText;
         }
+        else if(event.target.id == "delButton") {
+            currentNum.innerText = currentNum.innerText.slice(0,-1)
+        }
         else if (event.target.id == "equalButton") {
-            let answer = currentNum.innerText + operation.innerText + prevNum.innerText
+            let answer = `${prevNum.innerText} ${operation.innerText} ${currentNum.innerText}`
             console.log(answer)
             answer = eval(answer)
             console.log(answer)
