@@ -14,7 +14,13 @@ numButton.forEach(input => input.addEventListener("click", (event) => {
     }
 
     else if (event.target.id == "decimalButton") {
-        currentNum.innerText += event.target.innerText;
+        
+        if (currentNum.innerText.includes(".")) {
+            alert("Current number already has one decimal")
+        }
+        else {
+            currentNum.innerText += event.target.innerText;
+        }
     }
     else if (event.target.id == "delButton") {
         currentNum.innerText = currentNum.innerText.slice(0, -1)
@@ -60,6 +66,3 @@ numButton.forEach(input => input.addEventListener("click", (event) => {
     }
 }
 ))
-
-
-
