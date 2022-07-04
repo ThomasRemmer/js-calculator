@@ -28,26 +28,37 @@ numButton.forEach(input => input.addEventListener("click", (event) => {
             case "+":
                 currentNum.innerText = Number(prevNum.innerText) + Number(currentNum.innerText);
                 prevNum.innerText = ""
+                operation.innerText =""
                 break;
             case "-":
                 currentNum.innerText = Number(prevNum.innerText) - Number(currentNum.innerText);
                 prevNum.innerText = ""
+                operation.innerText =""
                 break;
             case "*":
                 currentNum.innerText = Number(prevNum.innerText) * Number(currentNum.innerText);
                 prevNum.innerText = ""
+                operation.innerText =""
                 break;
             case "/":
                 currentNum.innerText = Number(prevNum.innerText) / Number(currentNum.innerText);
                 prevNum.innerText = ""
+                operation.innerText =""
                 break;
         }
     }
     else if (event.target.id == "plusButton" || "minusButton" || "divButton" || "timesButton") {
+        switch (operation.innerText) {
+            case "":
+                prevNum.innerText = currentNum.innerText;
+                currentNum.innerText = "";
+                operation.innerText = event.target.innerText
+                break;
+            default:
+                operation.innerText = event.target.innerText
+                break;
+        }
 
-        prevNum.innerText = currentNum.innerText;
-        currentNum.innerText = "";
-        operation.innerText = event.target.innerText
 
     }
 
