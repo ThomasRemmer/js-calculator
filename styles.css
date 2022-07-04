@@ -29,16 +29,15 @@
 }
 .calculator .calculator__viewport {
   grid-column: 1/-1;
-  background-color: #D9BEA5;
-  opacity: 30%;
+  background: rgba(217, 190, 165, 0.5);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   flex-direction: column;
   padding: 1%;
 }
-.calculator .calculator__viewport .calculator__number {
-  background-color: none;
+.calculator .calculator__number {
+  background: none;
   font-size: 2rem;
   color: white;
 }/*# sourceMappingURL=styles.css.map */
