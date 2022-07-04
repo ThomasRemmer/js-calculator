@@ -29,13 +29,25 @@ let operation = document.getElementById("calculator__opperator")
             currentNum.innerText = currentNum.innerText.slice(0,-1)
         }
         else if (event.target.id == "equalButton") {
-            let answer = `${prevNum.innerText} ${operation.innerText} ${currentNum.innerText}`
-            console.log(answer)
-            answer = eval(answer)
-            console.log(answer)
-            currentNum.innerText = answer
-            prevNum.innerText =""
-            operation.innerText = ""
+
+            switch(operation.innerText) {
+                case "+":
+                    currentNum.innerText = Number(prevNum.innerText) + Number(currentNum.innerText);
+                    prevNum.innerText =""
+                    break;
+                case "-":
+                    currentNum.innerText = Number(prevNum.innerText) - Number(currentNum.innerText);
+                    prevNum.innerText =""
+                    break;
+                case "*":
+                    currentNum.innerText = Number(prevNum.innerText) * Number(currentNum.innerText);
+                    prevNum.innerText =""
+                    break;
+                case "/":
+                    currentNum.innerText = Number(prevNum.innerText) / Number(currentNum.innerText);
+                    prevNum.innerText =""
+                    break;
+            }
         }
         else if(event.target.id == "plusButton" || "minusButton" || "divButton" ||"timesButton") {
             
