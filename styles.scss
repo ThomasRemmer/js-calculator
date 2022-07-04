@@ -18,11 +18,12 @@ $infill-color: #3B3636;
     display: grid;
     justify-content: center;
     align-content: center;
-    height: 90vh;
-    width: 90vh;
+    height: 100vh;
+    max-width: 100%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 2px;
+    
 
     .calculator__button {
         cursor: pointer;
