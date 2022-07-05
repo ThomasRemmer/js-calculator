@@ -16,7 +16,7 @@ numButton.forEach(input => input.addEventListener("click", (event) => {
 
     }
     else if (event.target.id == "delButton") {
-        currentNum.innerText = currentNum.innerText.slice(0, -1)
+        handleDelete();
     }
     else if (event.target.id == "equalButton") {
         handleEquals();
@@ -44,27 +44,27 @@ const handleOpperator = () => {
 }
 const handleEquals = () => {
     switch (operation.innerText) {
-    case "+":
-        currentNum.innerText = Number(prevNum.innerText) + Number(currentNum.innerText);
-        prevNum.innerText = ""
-        operation.innerText = ""
-        break;
-    case "-":
-        currentNum.innerText = Number(prevNum.innerText) - Number(currentNum.innerText);
-        prevNum.innerText = ""
-        operation.innerText = ""
-        break;
-    case "*":
-        currentNum.innerText = Number(prevNum.innerText) * Number(currentNum.innerText);
-        prevNum.innerText = ""
-        operation.innerText = ""
-        break;
-    case "/":
-        currentNum.innerText = Number(prevNum.innerText) / Number(currentNum.innerText);
-        prevNum.innerText = ""
-        operation.innerText = ""
-        break;
-}
+        case "+":
+            currentNum.innerText = Number(prevNum.innerText) + Number(currentNum.innerText);
+            prevNum.innerText = ""
+            operation.innerText = ""
+            break;
+        case "-":
+            currentNum.innerText = Number(prevNum.innerText) - Number(currentNum.innerText);
+            prevNum.innerText = ""
+            operation.innerText = ""
+            break;
+        case "*":
+            currentNum.innerText = Number(prevNum.innerText) * Number(currentNum.innerText);
+            prevNum.innerText = ""
+            operation.innerText = ""
+            break;
+        case "/":
+            currentNum.innerText = Number(prevNum.innerText) / Number(currentNum.innerText);
+            prevNum.innerText = ""
+            operation.innerText = ""
+            break;
+    }
 }
 
 const handleDecimal = () => {
@@ -84,4 +84,7 @@ const handleClear = () => {
 
 const handleAddNum = () => {
     currentNum.innerText += event.target.innerText;
+}
+const handleDelete = () => {
+    currentNum.innerText = currentNum.innerText.slice(0, -1)
 }
